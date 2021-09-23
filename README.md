@@ -1,27 +1,20 @@
 # ActorLookup
+A spoiler-free, character/actor lookup service using Angular and ASP.NET. Includes title and character typeahead search.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+Demo: https://actorlookuptest.azurewebsites.net/
 
-## Development server
+Note: Demo app is running using the free Azure development plan, so expect occasional slow responses.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Screenshots
 
-## Code scaffolding
+Desktop Title Search (Home)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![alt text](https://i.imgur.com/cOpGh8U.png "Desktop Title Search (Home)")
 
-## Build
+Mobile Title Search
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![alt text](https://i.imgur.com/TqQTMXy.png "Mobile Title Search")
 
-## Running unit tests
+Mobile Result Page
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![alt text](https://i.imgur.com/zCwhaLb.png "Mobile Result Page")
