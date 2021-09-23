@@ -1,0 +1,65 @@
+
+@keyframes fadeInBlack {
+    from{
+        background-color: transparent
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.616);
+    }
+  }
+
+.full-page-fixed
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    animation-name: fadeInBlack;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    z-index: 2000;
+}
+
+.fixed-notification
+{
+    position: relative;
+    text-align: center;
+    padding: 4rem;
+    margin: 2rem;
+    border-radius: 20px;
+    box-shadow: 1px 1px 50px rgba(37, 37, 37, 0.452);
+}
+
+.notification-bold
+{
+    font-weight: 500;
+}
+
+.notification-title
+{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0 0 1rem 0;
+}
+
+.exit-notification
+{
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border-style: none;
+    border-color: transparent;
+
+    mat-icon
+    {
+        font-size: 2rem;
+    }
+}

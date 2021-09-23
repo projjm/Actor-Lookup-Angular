@@ -1,0 +1,30 @@
+.typeahead-search 
+{
+    width: 40rem;
+}
+
+.btn:focus,.btn:active
+{
+    outline: none !important;
+    box-shadow: none;
+}
+
+.new-search-button
+{
+    width: 9rem;
+    height: 3.5rem;
+    margin: 0 0 0 1rem;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: lightgrey;
+
+    font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .new-search-button
+    {
+        font-size: 0.9rem;
+    }
+}

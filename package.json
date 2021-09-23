@@ -6,19 +6,26 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve": "ng serve --host 192.168.0.2 --port 4200"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
+    "@angular/cdk": "^12.2.3",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
     "@angular/forms": "~12.2.0",
+    "@angular/localize": "~12.2.0",
+    "@angular/material": "^12.2.3",
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
-    "rxjs": "~6.6.0",
+    "@ng-bootstrap/ng-bootstrap": "10.0.0",
+    "bootstrap": "^4.6.0",
+    "date-fns": "^2.23.0",
+    "rxjs": "6.5.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

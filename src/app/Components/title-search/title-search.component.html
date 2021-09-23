@@ -1,0 +1,29 @@
+<div class="component-container">
+  <div class="search-bar">
+    <div class="typeahead-search">
+      <mat-icon class="material-icon search-icon" aria-hidden="false" aria-label="Search Icon">search</mat-icon>
+    
+      <input #inputBox id="typeahead-http" type="text" class="mx-sm-3"
+        [class.is-invalid]="searchFailed" 
+        [(ngModel)]="model"
+        [ngbTypeahead]="search"
+        [resultFormatter]="FormatTitleResultValue"
+        [inputFormatter]="FormatTitleResultValue"
+        (selectItem)="onValueSelected($event)"
+        placeholder="Search for a Title"
+        placement="none"
+      />
+      
+      <button *ngIf="!castSearching" mat-icon-button (click)="onClearClicked()">
+        <mat-icon class="cancel-icon" aria-hidden="false" aria-label="Cancel Icon">close</mat-icon>
+      </button>
+    
+      <mat-spinner *ngIf="castSearching" [diameter]="30" class="cast-searching-spinner material-icon" ></mat-spinner>
+    </div>
+    
+    <div *ngIf="searchFailed" class="search-failed">
+      <h2>Search failed. Please try again later.</h2>
+    </div> 
+  </div>
+</div>
+  

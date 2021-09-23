@@ -1,0 +1,115 @@
+.result-view
+{
+    overflow-y: scroll;
+    display: flex;
+    height: calc(100vh - 8rem);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 4rem 0 0 0;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar 
+    {
+        display: none;
+    }
+
+    .result-main
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+
+        img
+        {
+            border-radius: 20px;
+            width: 300px;
+            padding: 1rem;
+        }
+
+        .full-details
+        {
+            text-align: left;
+            padding: 1rem;
+            max-width: 25vw;
+        }
+
+    }
+
+    .actor-name
+    {
+        font-size: 1.75rem;
+        line-height: 120%;
+    }
+
+    .actor-role
+    {
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 100%;
+    }
+
+    .actor-born
+    {
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+
+    .actor-died
+    {
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+
+    .actor-summary
+    {
+        font-weight: 300;
+    }
+
+    .actor-awards
+    {
+        font-size: 1.25rem;
+    }
+
+    .extra-details
+    {
+        padding: 1rem;
+        .extra-details-sub
+        {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .result-view
+    {
+        margin: 1rem 0 0 0;
+
+        .result-main
+        {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img
+            {
+                width: 200px;
+                padding: 1rem;
+            }
+
+            .full-details
+            {
+                max-width: 100%;
+            }
+        }
+    }
+}

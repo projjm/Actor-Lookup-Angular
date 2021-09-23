@@ -1,0 +1,24 @@
+
+<div class="component-container">
+    <div class="result-view" *ngIf="characterResult">
+        <div class="result-main">
+            <img src="{{characterResult.actorInfo.image}}" alt="Image of actor">
+            <div class="full-details">
+                <p class="actor-name">
+                    {{characterResult.characterName}} is played by 
+                    <a href="{{actorImdbUrl}}{{characterResult.actorInfo.id}}">
+                        <span class="result-actor-name">{{characterResult.actorInfo.name}}</span>
+                    </a>
+                </p>
+                <p class="actor-role">{{characterResult.actorInfo.role}}</p>
+                <p class="actor-born">Born: {{birthFormatted}}</p>
+                <p class="actor-died" *ngIf="deathFormatted">Died: {{deathFormatted}}</p>
+                <p class="actor-summary">{{characterResult.actorInfo.summary}}</p>
+                <p class="actor-awards">Awards: {{characterResult.actorInfo.awards}}</p>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+

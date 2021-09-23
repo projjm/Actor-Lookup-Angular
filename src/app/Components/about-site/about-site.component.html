@@ -1,0 +1,17 @@
+<div class="component-conatiner">
+    <div class="full-page-fixed">
+        <div class="fixed-notification">
+            <button (click)="closeNotificationClicked()" class="exit-notification">
+                <mat-icon class="close-notification-btn" aria-hidden="false" aria-label="Cancel Icon">close</mat-icon>
+            </button>
+            <p class="notification-title">About</p>
+            <span class="notification-bold">Actor Lookup</span> is a tool designed for searching specific characters and discovering their respective actor.
+            <br><br>1. Search for a <span class="notification-bold">Title Name </span>(i.e. "Breaking Bad", "Dexter")
+            <br>2. Search for a <span class="notification-bold">Character Name</span> (i.e. "Walter White", "James Doakes")
+            <br>3. Select the character to discover information on the <span class="notification-bold">actor</span>.
+    
+            <br><br>Actor Lookup is powered by <a href="https://imdb-api.com/api">imdb-api</a>, every title in the Imdb index is available to search.
+            <br>Unfortunately some titles may contain <span class="notification-bold">no character information</span>, this is due to no cast information being available for that specific title.
+        </div>
+    </div>
+</div>

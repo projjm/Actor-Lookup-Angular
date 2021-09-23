@@ -1,0 +1,36 @@
+<div [hidden]="initialLoad" class="app-container">
+    <div class="header-area">
+        <button class="btn btn-outline-secondary header-button noselect" (click)="ShowAbout()">About</button>
+
+        <button *ngIf="CheckShowHeaderTitle()" (click)="resetApp()" class="header-title-button">
+            <h1 class="title-text header-title">Actor <span class="title-text-highlight">Lookup</span></h1>
+        </button>
+
+        <mat-icon *ngIf="!CheckShowHeaderTitle()" class="dark-mode" aria-hidden="false" aria-label="Light Mode Icon">dark_mode</mat-icon>
+        <mat-slide-toggle [checked]="darkModeEnabled" (change)="onSchemeToggled($event)"  *ngIf="!CheckShowHeaderTitle()" class="theme-toggle"></mat-slide-toggle>
+        <mat-icon *ngIf="!CheckShowHeaderTitle()" class="light-mode" aria-hidden="false" aria-label="Light Mode Icon">light_mode</mat-icon>
+
+    </div>
+    
+    <div *ngIf="!CheckShowHeaderTitle()" class="title-area">
+        <h1 class="title-text">Actor <span class="title-text-highlight">Lookup</span></h1>
+        <h2 class="title-subtext">Know the character, discover the actor.</h2>
+    </div>
+    
+    <div class="interact-area">
+        <app-about-site *ngIf="CheckShowAbout()" (onClose)="HideAbout()"></app-about-site>
+        <div class="search-controls">
+            <app-title-search #titleSearch *ngIf="CheckShowTitleSearch()" (onTitleSelected)="onTitleSelected($event)"></app-title-search>
+            <app-character-search #characterSearch *ngIf="CheckShowCharacterSearch()" (onNewSearchRequested)="onNewSearchRequested()" 
+            [lookupResults]="currentTitleCast" 
+            (onCharacterSelected)="onCharacterSelected($event)"
+            [autoFocus]="!CheckShowResultsView()"
+            ></app-character-search>
+        </div>
+        
+        <app-result-view *ngIf="CheckShowResultsView()" [characterResult]="currentCharacterInfo"></app-result-view>
+    </div>
+    <div class="footer-area">
+        © 2021 Actor Lookup
+    </div>
+</div>

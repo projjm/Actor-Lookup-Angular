@@ -1,0 +1,237 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css2?family=Sora&family=Urbanist&display=swap');
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+html
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Urbanist', sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+app-root
+{
+    height: 100%;
+    width: 100%;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.colour-scheme-light
+{
+    background-color: white;
+    //transition: background-color 0.25s, color 0.25s;
+
+    color:rgb(19, 19, 19);
+
+    h1.title-text {
+        .title-text-highlight
+        {
+            color: rgb(117, 62, 163);
+        }
+    } 
+
+    .typeahead-search
+    {
+        border-color: lightgrey;
+        
+        .search-icon
+        {
+            color: black;
+        }
+
+        .cancel-icon
+        {
+            color:black;
+        }
+
+        
+        input
+        {
+            outline-color: transparent;
+            background-color: transparent;
+            color: black;
+        }
+
+        ::placeholder 
+        {
+            color: black;
+        }
+
+        .dropdown-menu
+        {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .dropdown-item
+        {
+            color: black;
+        }
+    }
+
+    .search-failed
+    {
+        color:rgb(128, 18, 18);
+    }
+
+    .result-view
+    {
+        color:black;
+
+        .actor-name .result-actor-name
+        {
+            color: #6C24A7;
+        }
+    }
+
+    .btn-outline-secondary
+    {
+        color: #6c757d;
+        border-color: #6c757d;
+
+        &:hover
+        {
+            background-color: #6c757d;
+            color: white;
+        }
+    }
+
+    .fixed-notification
+    {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .notification-bold
+    {
+        color: rgb(83, 1, 83);
+    }
+
+    .close-notification-btn
+    {
+        color: black;
+    }
+
+    .title-text.header-title
+    {
+        color: black;
+    }
+
+    .footer-area
+    {
+        color: rgba(0, 0, 0, 0.466);
+    }
+}
+
+.colour-scheme-dark
+{
+    background-color: rgb(36, 36, 36);
+    //transition: background-color 0.25s, color 0.25s;
+
+    color: white;
+
+    h1.title-text {
+        .title-text-highlight
+        {
+            color: rgb(185, 100, 255);
+        }
+    }   
+
+    .typeahead-search
+    {
+        border-color: rgb(255, 255, 255);
+
+        .search-icon
+        {
+            color: white;
+        }
+
+        .cancel-icon
+        {
+            color:white;
+        }
+
+        input
+        {
+            outline-color: transparent;
+            background-color: transparent;
+            color: white;
+        }
+
+        ::placeholder 
+        {
+            color: white;
+        }
+
+        .dropdown-menu
+        {
+            background-color: rgb(42, 42, 42);
+        }
+
+        .dropdown-item
+        {
+            color: white;
+        }
+    }
+
+    .search-failed
+    {
+        color:rgb(128, 18, 18);
+    }
+
+    .result-view
+    {
+        color:white;
+
+        .actor-name .result-actor-name
+        {
+            color: rgb(185, 100, 255);
+        }
+    }
+
+    .btn-outline-secondary
+    {
+        color: #dddddd;
+        border-color: #a8afb6;
+    }
+
+    .fixed-notification
+    {
+        background-color: rgb(49, 49, 49);
+    }
+
+    .notification-bold
+    {
+        color: rgb(226, 191, 255);
+    }
+
+    .close-notification-btn
+    {
+        color: white;
+    }
+
+    .title-text.header-title
+    {
+        color: white;
+    }
+
+    .footer-area
+    {
+        color: rgba(255, 255, 255, 0.548);
+    }
+}

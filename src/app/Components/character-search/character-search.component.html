@@ -1,0 +1,27 @@
+<div class="component-container">
+    <div class="search-bar">
+        <div class="typeahead-search">
+            <mat-icon class="material-icon search-icon" aria-hidden="false" aria-label="Search Icon">search</mat-icon>
+        
+            <input #inputBox typeahead-min-length="0" id="typeahead-http" type="text" class="mx-sm-3" 
+            [(ngModel)]="model" 
+            [ngbTypeahead]="search"
+            [resultFormatter]="FormatCastResultValue"
+            [inputFormatter]="FormatCastResultValue"
+            (selectItem)="onValueSelected($event)"
+            (focus)="focus$.next($any($event).target.value)"
+            (click)="click$.next($any($event).target.value)"
+            #instance="ngbTypeahead"
+            placeholder="Search for a Character"
+            placement="none"
+            />
+        
+            <button *ngIf="!actorSearching" mat-icon-button (click)="onClearClicked()">
+                <mat-icon class="material-icon cancel-icon" aria-hidden="false" aria-label="Cancel Icon">close</mat-icon>
+            </button>
+        
+            <mat-spinner *ngIf="actorSearching" [diameter]="30" class="cast-searching-spinner material-icon" ></mat-spinner>
+        </div>
+        <button (click)="onNewSearchClicked()" class="btn btn-outline-secondary noselect new-search-button">Change Title</button>    
+    </div>
+</div>
